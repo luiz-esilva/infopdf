@@ -23,7 +23,7 @@ C:\Users\usuario\AppData\Local\Programs\Tesseract-OCR\
 ### 2. Copiar a Pasta Poppler
 
 - Copie a pasta `poppler-24.08.0` da pasta `Requisitos/` para o disco **C:**
-C:\poppler-24.08.0\
+> C:\poppler-24.08.0\
 
 
 ---
@@ -31,8 +31,8 @@ C:\poppler-24.08.0\
 ### 3. Configurar Variáveis de Ambiente
 
 Adicione os seguintes caminhos ao **Path do usuário** nas variáveis de ambiente do sistema:
-C:\poppler-24.08.0\Library\bin
-C:\Users\usuario\AppData\Local\Programs\Tesseract-OCR
+> C:\poppler-24.08.0\Library\bin
+> C:\Users\usuario\AppData\Local\Programs\Tesseract-OCR
 
 ---
 
@@ -63,11 +63,10 @@ PDF/
 - Usa OCR para extrair o texto.
 
 - Procura o padrão:
-Nº Guia no Prestador: 123456789
+`Nº Guia no Prestador: 123456789`
 
 - Ou variações como:
-N° Guia no Prestador
-Com ou sem espaços e dois-pontos
+`N° Guia no Prestador com ou sem espaços e dois-pontos`
 
 ---
 
