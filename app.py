@@ -17,6 +17,7 @@ logging.basicConfig(
 
 def extrair_numero_guia(pdf_path):
     nome_arquivo = os.path.basename(pdf_path)
+    pasta = os.path.dirname(pdf_path)
 
     try:
         paginas = convert_from_path(pdf_path, dpi=300)
@@ -29,7 +30,13 @@ def extrair_numero_guia(pdf_path):
 
             if resultado:
                 numero = resultado.group(1)
-                msg = f"Arquivo: {nome_arquivo} | Página: {i + 1} | Número da guia encontrado: {numero}"
+                novo_nome = f"{numero}.pdf"
+                novo_caminho = os.path.join(pasta, novo_nome)
+
+                # Renomeia o arquivo PDF
+                os.rename(pdf_path, novo_caminho)
+
+                msg = f"Arquivo: {nome_arquivo} | Página: {i + 1} | Número da guia encontrado: {numero} | Renomeado para: {novo_nome}"
                 print(msg)
                 logging.info(msg)
                 return numero
